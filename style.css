@@ -1,0 +1,12 @@
+body {
+    background: aliceblue;
+}
+.form-control {
+    margin-bottom: 20px;
+}
+h2 {
+    margin: 20px 0;
+}
+.added-books {
+    margin-top: 20px;
+}

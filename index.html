@@ -1,173 +1,53 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Vein Parallax CV/Resume </title>
-    <!-- FAV AND TOUCH ICONS   -->
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:300,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://www.themespiders.com/premium/cv/style-2/assets/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-    <style>
-    html * {
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    html,
-    body {
-      margin: auto 0;
-      padding: 0;
-      text-align: center;
-      font-family: "Work Sans", sans-serif;
-    }
-    .blog-header {            
-        background-size: cover;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-    .blog-overlay {
-        background: rgba(0, 0, 0, 0.42);
-        color: #fff;
-    }
-    .header-content{
-        padding: 100px 0;
-    }
-    .header-content img{
-        margin-top: 30px;
-    }
-    .header-content a{
-        padding: 20px 30px;
-        color: #000;
-        background: #fff;
-        text-decoration: none;
-        margin: 0 10px;
-        font-size: 20px;
-        -webkit-transition: all 0.4s ease-out;
-        -moz-transition: all 0.4s ease-out;
-        -o-transition: all 0.4s ease-out;
-        -ms-transition: all 0.4s ease-out;
-        font-family: "Work Sans", sans-serif;
-        border-radius: 2px;
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 book-list">
+                <h2 class="text-center mt-20">Book List</h2>
+                <form action="" id="book-form" class="book-list-form">
+                    <input type="text" class="form-control" name="" id="book-name" placeholder="Enter Book Name">
+                    <input type="text" class="form-control" name="" id="book-author" placeholder="Enter Book Author">
+                    <input type="text" class="form-control" name="" id="book-snbs" placeholder="Enter Book SNBS">
+                    <input type="submit" class="btn btn-submit btn-success btn-block" value="Add Book">
+                </form>
 
-    } 
-    .header-content a:hover {
-        color: #5C55FD;
-        box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
-        -moz-box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
-        -webkit-box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
-        -o-box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
-    }
-    .content {
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
-    .preview{
-        display: inline-block;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-    .preview img {
-        box-shadow: 0px 5px 20px 0px rgba(51,73,94,0.05);
-        transition: all 400ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    }
-    .preview a:hover img {
-        box-shadow: 0px 20px 65px 0px rgba(51,73,94,0.15);
-    }
-    img {
-        vertical-align: top;
-    }
-    h1 {
-        text-align: center;
-        font-family: "Work Sans", sans-serif;
-        font-size: 36px;
-        font-weight: 500;
-        margin-bottom: 5px;
-        color: #FFF;
-        margin-top: 30px;
-        margin-bottom: 60px;
-    }
+                <br>
 
-    .rating{
-        margin-top: 60px;
-    }
-    .rating img{
-        padding: 30px;
-    }
-    .copyright{
-        padding: 20px 0;
-    }
-      @media only screen 
-      and (max-width: 992px) {
-        .preview {
-            display: block;
-            padding: 10px;
-        }
-        .preview img{            
-            max-width:100%;
-            height:auto;
-        }
-         .header-content a{
-            display: block;
-            margin-bottom: 20px;
-         }
+                <div class="added-books">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Book Name </th>
+                                <th>Book Author </th>
+                                <th>Book BSNO </th>
+                            </tr>
+                        </thead>
+                        <tbody id="book-list">
+                            <tr>
+                                <td>Book One</td>
+                                <td>Author One</td>
+                                <td> 5858</td>
+                            </tr>
+                        </tbody>
 
-      }
-    </style>
-  </head> 
-    <body>
-        <div class="blog-header" style="background-image: url(http://www.themespiders.com/premium/cv/blog-bg.jpg);">
-            <div class="blog-overlay">
-                <div class="container">
-                    <div class="header-content col-xs-12">
-                        <img src="http://www.themespiders.com/premium/cv/vein.jpg" alt="">
-                        <h1>Vein Parallax CV/Resume</h1>
-                        <a href="#">Purchase Now</a>
-                        <a href="http://www.themespiders.com/premium/cv/docs">Documentation</a>
-                    </div>
+
+                    </table>
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="content col-xs-12">
-                    <div class="preview">
-                        <a href="http://www.themespiders.com/premium/cv/style-1">
-                            <img src="http://www.themespiders.com/premium/cv/1.jpg">
-                        </a>
-                        <h2> Style 1</h2>
-                    </div>
-                    <div class="preview">
-                        <a href="http://www.themespiders.com/premium/cv/style-2">
-                            <img src="http://www.themespiders.com/premium/cv/2.jpg">
-                        </a>
-                        <h2> Style 2</h2>
-                    </div>
-                    
-                    <div class="preview last">
-                        <a href="http://www.themespiders.com/premium/cv/style-2/blog.html">
-                            <img src="http://www.themespiders.com/premium/cv/3.jpg">
-                        </a>
-                        <h2>Blog</h2>
-                    </div>
-                </div>
-
-                <div class="rating">
-                    <img src="http://www.themespiders.com/premium/cv/rating.png" alt="">
-                    <p>Rate us 5 Star If you like and love our Theme</p>
-                    <h3>Thanks A Lot!</h3>
-                </div>
-
-                <hr class="hr">
-                <p class="copyright"> Designed and Develop with 💜 by <a href="">ThemeSpiders</a></p>
-            </div>
-        </div>
-    </body>
+    </div>
+    <script src="app.js"></script>
+</body>
 </html>
