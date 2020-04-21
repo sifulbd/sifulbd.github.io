@@ -1,0 +1,21 @@
+[
+    {
+        "id" : 1,
+        "name" : "Eriana Hayek",
+        "email" : "email@website.com",
+        "membership" : "standard"
+    },
+    {
+        "id" : 2,
+        "name" : "Nvana Cng",
+        "email" : "email@website.com",
+        "membership" : "standard"
+    },
+    {
+        "id" : 3,
+        "name" : "web assets",
+        "email" : "email@website.com",
+        "membership" : "standard"
+    }
+
+]
