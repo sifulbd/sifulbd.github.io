@@ -53,7 +53,7 @@ easyHTTP.prototype.post = function(url, data, callback) {
 
 // Delete
 
-easyHTTP.prototype.delete = function(url, callback) {
+easyHTTP.prototype.delete = function(url, callback) { 
     this.http.open('DELETE', url, true);
     let self = this.http;
     // 

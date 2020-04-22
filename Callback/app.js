@@ -10,7 +10,7 @@ const posts = [
     {
         title: 'This is a title Three',
         body: 'This is a body Three'
-    },
+    }, 
 ];
 
 function createpost(post, callback){
