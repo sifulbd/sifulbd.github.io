@@ -13,6 +13,7 @@ function loadJokes() {
         const responseTxt = JSON.parse(this.responseText);
         if(xhr.status === 200) {
             // initailize output
+            console.log(responseTxt);
             let output = '';
             if(responseTxt.type === 'success') {
                 responseTxt.value.forEach(function(joke){
