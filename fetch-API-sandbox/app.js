@@ -44,17 +44,17 @@ function loadJsonData(e) {
 
 //GET from api
 function loadApiData(e) {
-    fetch('https://api.github.com/users')
+    fetch(' https://www.googleapis.com/drive/v3/files')
         .then(function(res) {
            return res.json();
         })
         .then(function(data) {
             let output = '';
             console.log(data);
-            data.forEach(function(post) {
-                output += `<li>Username: ${post.login} , GitHub URL: <a href="${post.html_url}">${post.id}</a></li> `
-            })
-            document.querySelector('#output').innerHTML = output;
+            // data.forEach(function(post) {
+            //     output += `<li>Username: ${post.login} , GitHub URL: <a href="${post.html_url}">${post.id}</a></li> `
+            // })
+            // document.querySelector('#output').innerHTML = output;
         })        
         .catch(function(err) {
             console.log(err);
