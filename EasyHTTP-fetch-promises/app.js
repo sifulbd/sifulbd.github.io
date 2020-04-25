@@ -13,7 +13,12 @@ const data = [
     {
         name: 'John Doe 2',
         username: 'jdone2',
-        email: 'email@g2mail.com'
+        email: 'email@g2mail.com' 
+    },
+    {
+        name: 'John Doe 2',
+        username: 'jdone2',
+        email: 'email@g2mail.com' 
     }
 ]
 
