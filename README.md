@@ -1,2 +1,2 @@
 # sifulbd.github.io
-my profile
+I added all JavaScript practice scripts here.
