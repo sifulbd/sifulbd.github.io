@@ -1,33 +1,23 @@
-const posts = [
-    {
-        title: 'This is a title one',
-        body: 'This is a body one'
-    },
-    {
-        title: 'This is a title two',
-        body: 'This is a body two'
-    },
-    {
-        title: 'This is a title Three',
-        body: 'This is a body Three'
-    }, 
-];
+// search input
+const github = new Github;
+const ui = new UI;
+const searchUser = document.getElementById('userName');
 
-function createpost(post, callback){
-    setTimeout(function(){
-        posts.push(post);
-        callback();
-    }, 1000);
-}
-
-function getPost() {
-    setTimeout(function() {
-        let output = '';
-        posts.forEach(function(post){
-            output += `<li>Title: ${post.title}</li>`;         
-        });
-        document.querySelector('#output').innerHTML = output;
-    }, 2000)
-
-}
-createpost({title: 'this is title four', body: 'this is body four'}, getPost);
+searchUser.addEventListener('keyup', (e) => {
+    const userText = e.target.value;
+    if(userText !== '') {
+        github.getUser(userText)
+        .then(data => {
+            if(data.profile.message === 'Not Found') {
+                //show alert
+                ui.showAlert('Profile Not Found', 'alert alert-danger');
+            } else {
+                ui.showProfile(data.profile);
+                ui.showRepos(data.repos);
+            }
+        })
+    } else { 
+        // clear profile
+        ui.clearProfile();
+    }
+}); 
